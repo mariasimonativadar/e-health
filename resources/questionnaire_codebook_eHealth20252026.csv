@@ -1,97 +1,97 @@
-﻿question;type;name of column;[codification] options (if applicable)
-How old are you?;integer number;age;
-What is your gender identity?;dropdown;gender;[0] Male [1] Female [2] Non-binary [3] Prefer not to say
-What is your highest level of education completed?;dropdown;education;[5] Elementary school [8] Middle school [13] High School [18]Bachelor's Degree [22] Master's Degree [25] Doctoral Degree
-What is your current marital status?;dropdown;marital;[0] Single [1] Married [2] Divorced [3] Widowed [4] Separated [5] Prefer not to say
-What is your annual household income before taxes?;integer number;income;
-How often do you have a drink containing alcohol?;radio;audit_1;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-How many drinks containing alcohol do you have on a typical day when you are drinking?;radio;audit_2;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-How often do you have six or more drinks on one occasion?;radio;audit_3;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-How often during the last year have you found that you were not able to stop drinking once you had started?;radio;audit_4;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-How often during the last year have you failed to do what was normally expected of you because of drinking?;radio;audit_5;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-How often during the last year have you needed a first drink  in the morning to get yourself going after a heavy drinking session?;radio;audit_6;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-How often during the last year have you had a feeling of guilt or remorse after drinking?;radio;audit_7;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-How often during the last year have you been unable to remember what happened the night before because of your drinking?;radio;audit_8;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-Have you or someone else been injured because of your drinking?;radio;audit_9;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-Has a relative, friend, doctor, or other health care worker been  concerned about your drinking or suggested you cut down?;radio;audit_10;[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
-Have you used drugs other than those required for medical reasons?;radio;dast_1;[0] No [1] Yes
-Do you use more than one drug at a time?;radio;dast_2;[0] No [1] Yes
-Are you always able to stop using drugs when you want to? (If never use drugs, answer “Yes”);radio;dast_3;[0] No [1] Yes
-Have you ever had blackouts or flashbacks as a result of drug use?;radio;dast_4;[0] No [1] Yes
-Do you ever feel bad or guilty about your drug use? (If never use drugs, answer “No”);radio;dast_5;[0] No [1] Yes
-Does your spouse (or parents) ever complain about your involvement with drugs?;radio;dast_6;[0] No [1] Yes
-Have you neglected your family because of your use of drugs?;radio;dast_7;[0] No [1] Yes
-Have you engaged in illegal activities in order to obtain drugs?;radio;dast_8;[0] No [1] Yes
-Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?;radio;dast_9;[0] No [1] Yes
-Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?;radio;dast_10;[0] No [1] Yes
-Have you bet more than you could really afford to lose?;radio;pgsi_1;[0] Never [1] Sometimes [2] Most of the time [3] Almost always
-Have you needed to gamble with larger amounts of money to get the same feeling of excitement?;radio;pgsi_2;[0] Never [1] Sometimes [2] Most of the time [3] Almost always
-When you gambled, did you go back another day to try to win back the money you lost?;radio;pgsi_3;[0] Never [1] Sometimes [2] Most of the time [3] Almost always
-Have you borrowed money or sold anything to get money to gamble?;radio;pgsi_4;[0] Never [1] Sometimes [2] Most of the time [3] Almost always
-Have you felt that you might have a problem with gambling?;radio;pgsi_5;[0] Never [1] Sometimes [2] Most of the time [3] Almost always
-Has your gambling caused you any health problems, including stress or anxiety?;radio;pgsi_6;[0] Never [1] Sometimes [2] Most of the time [3] Almost always
-Has your gambling caused any financial problems for you or your household?;radio;pgsi_7;[0] Never [1] Sometimes [2] Most of the time [3] Almost always
-Have you felt guilty about the way you gamble or about what happens when you gamble?;radio;pgsi_8;[0] Never [1] Sometimes [2] Most of the time [3] Almost always
-Has gambling caused you to miss days of work, study, or other important activities?;radio;pgsi_9;[0] Never [1] Sometimes [2] Most of the time [3] Almost always
-How often do you find that you stay online longer than you intended?;radio;iat_1;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you neglect household chores to spend more time online?;radio;iat_2;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you prefer the excitement of the Internet to intimacy with your partner?;radio;iat_3;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you form new relationships with fellow online users?;radio;iat_4;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do others in your life complain about the amount of time you spend online?;radio;iat_5;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you lose sleep due to late-night internet use?;radio;iat_6;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you find yourself anticipating when you will go online again?;radio;iat_7;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you snap, yell, or act annoyed if someone interrupts you while online?;radio;iat_8;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you find yourself saying 'just a few more minutes' when online?;radio;iat_9;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you try to cut down the amount of time you spend online and fail?;radio;iat_10;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you choose to spend time online instead of spending time with others (family, friends)?;radio;iat_11;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you feel restless, moody, depressed, or irritable when attempting to cut down or stop internet use?;radio;iat_12;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you check your email before something else that you need to do?;radio;iat_13;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you fear that life without the Internet would be boring, empty, or joyless?;radio;iat_14;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you snap, yell, or act annoyed if you are unable to use the Internet?;radio;iat_15;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you fantasize about being online when you are offline?;radio;iat_16;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you lose track of time when online?;radio;iat_17;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do your grades or school work suffer because of the amount of time you spend online?;radio;iat_18;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you find yourself staying online longer than you had planned?;radio;iat_19;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-How often do you use the Internet as a way of escaping from problems or relieving a dysphoric mood (e.g., feelings of helplessness, guilt, anxiety)?;radio;iat_20;[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
-In the past month, how much were you bothered by: Repeated, disturbing, and unwanted memories of the stressful experience?;radio;pcl5_1;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Repeated, disturbing dreams of the stressful experience?;radio;pcl5_2;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Suddenly feeling or acting as if the stressful experience were happening again (as if you were reliving it)?;radio;pcl5_3;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Feeling very upset when something reminded you of the stressful experience?;radio;pcl5_4;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Having strong physical reactions when something reminded you of the stressful experience (e.g., heart pounding, trouble breathing)?;radio;pcl5_5;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Avoiding memories, thoughts, or feelings related to the stressful experience?;radio;pcl5_6;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Avoiding external reminders of the stressful experience (e.g., people, places, conversations, activities, objects, situations)?;radio;pcl5_7;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Trouble remembering important parts of the stressful experience?;radio;pcl5_8;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Having strong negative beliefs about yourself, other people, or the world (e.g., 'I am bad', 'No one can be trusted')?;radio;pcl5_9;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Blaming yourself or someone else for the stressful experience or what happened after it?;radio;pcl5_10;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Having strong negative emotional states (e.g., fear, horror, anger, guilt, or shame)?;radio;pcl5_11;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Loss of interest in activities that you used to enjoy?;radio;pcl5_12;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Feeling distant or cut off from other people?;radio;pcl5_13;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Difficulty experiencing positive emotions (e.g., being unable to feel happiness or love)?;radio;pcl5_14;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Irritable behavior, angry outbursts, or acting aggressively?;radio;pcl5_15;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Taking too many risks or doing things that could cause you harm?;radio;pcl5_16;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Being 'superalert' or watchful or on guard?;radio;pcl5_17;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Feeling jumpy or easily startled?;radio;pcl5_18;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Having difficulty concentrating?;radio;pcl5_19;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-In the past month, how much were you bothered by: Trouble falling or staying asleep?;radio;pcl5_20;[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
-There is a special person who is around when I am in need.;radio;mspss_1;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-There is a special person with whom I can share my joys and sorrows.;radio;mspss_2;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-My family really tries to help me.;radio;mspss_3;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-I get the emotional help and support I need from my family.;radio;mspss_4;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-I have a special person who is a real source of comfort to me.;radio;mspss_5;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-My friends really try to help me.;radio;mspss_6;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-I can count on my friends when things go wrong.;radio;mspss_7;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-I can talk about my problems with my family.;radio;mspss_8;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-I have friends with whom I can share my joys and sorrows.;radio;mspss_9;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-There is a special person in my life who cares about my feelings.;radio;mspss_10;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-My family is willing to help me make decisions.;radio;mspss_11;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-I can depend on my friends for help if I need it.;radio;mspss_12;[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
-In most ways my life is close to my ideal.;radio;swls_1;[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
-The conditions of my life are excellent.;radio;swls_2;[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
-I am satisfied with my life.;radio;swls_3;[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
-So far I have gotten the important things I want in life.;radio;swls_4;[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
-If I could live my life over, I would change almost nothing.;radio;swls_5;[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
-I have felt cheerful and in good spirits.;radio;who5_1;[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
-I have felt calm and relaxed.;radio;who5_2;[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
-I have felt active and vigorous.;radio;who5_3;[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
-I woke up feeling fresh and rested.;radio;who5_4;[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
-My daily life has been filled with things that interest me.;radio;who5_5;[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
+question,type,name of column,[codification] options (if applicable)
+How old are you?,integer number,age,
+What is your gender identity?,dropdown,gender,[0] Male [1] Female [2] Non-binary [3] Prefer not to say
+What is your highest level of education completed?,dropdown,education,[5] Elementary school [8] Middle school [13] High School [18]Bachelor's Degree [22] Master's Degree [25] Doctoral Degree
+What is your current marital status?,dropdown,marital,[0] Single [1] Married [2] Divorced [3] Widowed [4] Separated [5] Prefer not to say
+What is your annual household income before taxes?,integer number,income,
+How often do you have a drink containing alcohol?,radio,audit_1,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+How many drinks containing alcohol do you have on a typical day when you are drinking?,radio,audit_2,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+How often do you have six or more drinks on one occasion?,radio,audit_3,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+How often during the last year have you found that you were not able to stop drinking once you had started?,radio,audit_4,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+How often during the last year have you failed to do what was normally expected of you because of drinking?,radio,audit_5,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+How often during the last year have you needed a first drink  in the morning to get yourself going after a heavy drinking session?,radio,audit_6,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+How often during the last year have you had a feeling of guilt or remorse after drinking?,radio,audit_7,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+How often during the last year have you been unable to remember what happened the night before because of your drinking?,radio,audit_8,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+Have you or someone else been injured because of your drinking?,radio,audit_9,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+"Has a relative, friend, doctor, or other health care worker been  concerned about your drinking or suggested you cut down?",radio,audit_10,[0] Never [1] Monthly or less [2] 2-4 times a month [3] 2-3 times a week [4] 4 or more times a week
+Have you used drugs other than those required for medical reasons?,radio,dast_1,[0] No [1] Yes
+Do you use more than one drug at a time?,radio,dast_2,[0] No [1] Yes
+Are you unable to stop abusing drugs when you want to? ,radio,dast_3,[0] No [1] Yes
+Have you ever had blackouts or flashbacks as a result of drug use?,radio,dast_4,[0] No [1] Yes
+"Do you ever feel bad or guilty about your drug use? (If never use drugs, answer “No”)",radio,dast_5,[0] No [1] Yes
+Does your spouse (or parents) ever complain about your involvement with drugs?,radio,dast_6,[0] No [1] Yes
+Have you neglected your family because of your use of drugs?,radio,dast_7,[0] No [1] Yes
+Have you engaged in illegal activities in order to obtain drugs?,radio,dast_8,[0] No [1] Yes
+Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?,radio,dast_9,[0] No [1] Yes
+"Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?",radio,dast_10,[0] No [1] Yes
+Have you bet more than you could really afford to lose?,radio,pgsi_1,[0] Never [1] Sometimes [2] Most of the time [3] Almost always
+Have you needed to gamble with larger amounts of money to get the same feeling of excitement?,radio,pgsi_2,[0] Never [1] Sometimes [2] Most of the time [3] Almost always
+"When you gambled, did you go back another day to try to win back the money you lost?",radio,pgsi_3,[0] Never [1] Sometimes [2] Most of the time [3] Almost always
+Have you borrowed money or sold anything to get money to gamble?,radio,pgsi_4,[0] Never [1] Sometimes [2] Most of the time [3] Almost always
+Have you felt that you might have a problem with gambling?,radio,pgsi_5,[0] Never [1] Sometimes [2] Most of the time [3] Almost always
+"Has your gambling caused you any health problems, including stress or anxiety?",radio,pgsi_6,[0] Never [1] Sometimes [2] Most of the time [3] Almost always
+Has your gambling caused any financial problems for you or your household?,radio,pgsi_7,[0] Never [1] Sometimes [2] Most of the time [3] Almost always
+Have you felt guilty about the way you gamble or about what happens when you gamble?,radio,pgsi_8,[0] Never [1] Sometimes [2] Most of the time [3] Almost always
+"Has gambling caused you to miss days of work, study, or other important activities?",radio,pgsi_9,[0] Never [1] Sometimes [2] Most of the time [3] Almost always
+How often do you find that you stay online longer than you intended?,radio,iat_1,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you neglect household chores to spend more time online?,radio,iat_2,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you prefer the excitement of the Internet to intimacy with your partner?,radio,iat_3,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you form new relationships with fellow online users?,radio,iat_4,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do others in your life complain about the amount of time you spend online?,radio,iat_5,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do your grades or schoolwork suffer because of the amount of time you spend online?,radio,iat_6,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you check your email before something else that you need to do?,radio,iat_7,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often does your job performance or productivity suffer because of the Internet?,radio,iat_8,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you become defensive or secretive when anyone asks you what you do online?,radio,iat_9,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you block out disturbing thoughts about your life with soothing thoughts of the Internet?,radio,iat_10,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you find that you find yourself anticipating when you will go online again?,radio,iat_11,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+"How often do you fear that life without the Internet would be boring, empty or joyless?",radio,iat_12,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+"How often do you snap, yell or act annoyed if someone bothers you while you are online?",radio,iat_13,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you lose sleep due to late night log-ins?,radio,iat_14,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+"How often do you feel preoccupied with the Internet when offline, or fantasize about being online?",radio,iat_15,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you find yourself saying “just a few more minutes” when online?,radio,iat_16,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you try to cut down the amount of time you spend online?,radio,iat_17,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you try to hide how long you’ve been online?,radio,iat_18,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+How often do you choose to spend more time online over going out with others?,radio,iat_19,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+"How often do you feel depressed, moody or nervous when you are offline, which goes away when you are back online?",radio,iat_20,[0] Never [1] Rarely [2] Sometimes [3] Often [4] Very often [5] Always
+"In the past month, how much were you bothered by: Repeated, disturbing, and unwanted memories of the stressful experience?",radio,pcl5_1,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Repeated, disturbing dreams of the stressful experience?",radio,pcl5_2,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Suddenly feeling or acting as if the stressful experience were happening again (as if you were reliving it)?",radio,pcl5_3,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Feeling very upset when something reminded you of the stressful experience?",radio,pcl5_4,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Having strong physical reactions when something reminded you of the stressful experience (e.g., heart pounding, trouble breathing)?",radio,pcl5_5,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Avoiding memories, thoughts, or feelings related to the stressful experience?",radio,pcl5_6,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Avoiding external reminders of the stressful experience (e.g., people, places, conversations, activities, objects, situations)?",radio,pcl5_7,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Trouble remembering important parts of the stressful experience?",radio,pcl5_8,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Having strong negative beliefs about yourself, other people, or the world (e.g., 'I am bad', 'No one can be trusted')?",radio,pcl5_9,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Blaming yourself or someone else for the stressful experience or what happened after it?",radio,pcl5_10,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Having strong negative emotional states (e.g., fear, horror, anger, guilt, or shame)?",radio,pcl5_11,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Loss of interest in activities that you used to enjoy?",radio,pcl5_12,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Feeling distant or cut off from other people?",radio,pcl5_13,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Difficulty experiencing positive emotions (e.g., being unable to feel happiness or love)?",radio,pcl5_14,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Irritable behavior, angry outbursts, or acting aggressively?",radio,pcl5_15,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Taking too many risks or doing things that could cause you harm?",radio,pcl5_16,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Being 'superalert' or watchful or on guard?",radio,pcl5_17,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Feeling jumpy or easily startled?",radio,pcl5_18,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Having difficulty concentrating?",radio,pcl5_19,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+"In the past month, how much were you bothered by: Trouble falling or staying asleep?",radio,pcl5_20,[0] Not at all [1] A little bit [2] Moderately [3] Quite a bit [4] Extremely
+There is a special person who is around when I am in need.,radio,mspss_1,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+There is a special person with whom I can share my joys and sorrows.,radio,mspss_2,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+My family really tries to help me.,radio,mspss_3,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+I get the emotional help and support I need from my family.,radio,mspss_4,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+I have a special person who is a real source of comfort to me.,radio,mspss_5,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+My friends really try to help me.,radio,mspss_6,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+I can count on my friends when things go wrong.,radio,mspss_7,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+I can talk about my problems with my family.,radio,mspss_8,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+I have friends with whom I can share my joys and sorrows.,radio,mspss_9,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+There is a special person in my life who cares about my feelings.,radio,mspss_10,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+My family is willing to help me make decisions.,radio,mspss_11,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+I can talk about my problems with my friends.,radio,mspss_12,[1] Very strongly disagree [2] Strongly disagree [3] Mildly disagree [4] Neutral [5] Mildly agree [6] Strongly agree [7] Very strongly agree
+In most ways my life is close to my ideal.,radio,swls_1,[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
+The conditions of my life are excellent.,radio,swls_2,[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
+I am satisfied with my life.,radio,swls_3,[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
+So far I have gotten the important things I want in life.,radio,swls_4,[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
+"If I could live my life over, I would change almost nothing.",radio,swls_5,[1] Strongly disagree [2] Disagree [3] Slightly disagree [4] Neither agree nor disagree [5] Slightly agree [6] Agree [7] Strongly agree
+I have felt cheerful and in good spirits.,radio,who5_1,[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
+I have felt calm and relaxed.,radio,who5_2,[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
+I have felt active and vigorous.,radio,who5_3,[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
+I woke up feeling fresh and rested.,radio,who5_4,[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
+My daily life has been filled with things that interest me.,radio,who5_5,[0] At no time [1] Some of the time [2] Less than half the time [3] More than half the time [4] Most of the time [5] All of the time
