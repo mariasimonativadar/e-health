@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbe70e0cb15649819c2f5a56a67aa4f, type: 3}
+  m_Name: MIA_DATA
+  m_EditorClassIdentifier: Assembly-CSharp::PersonaData
+  title: MIA-OVERWHELMED STUDENT
+  body: "ABOUT : 28, master\u2019s student juggling part-time work. Anxious at night;
+    doom-scrolls, sleeps late.\n\LGOALS: Quick, realistic ways to calm down; ask
+    for help without feeling like a burden.\L\nCHALLENGES : Harsh self-talk, loses
+    momentum when overwhelmed, hides struggles from friends.\L\nTRIGGERS : Exam deadlines,
+    money stress, late-night comparison, messy room.\L\nSTRENGTHS: Self-aware, caring,
+    loves checklists and small wins."
+  startScene: MIA_INTRO

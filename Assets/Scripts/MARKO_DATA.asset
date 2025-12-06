@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbe70e0cb15649819c2f5a56a67aa4f, type: 3}
+  m_Name: MARKO_DATA
+  m_EditorClassIdentifier: Assembly-CSharp::PersonaData
+  title: "MARKO \u2014 Social Drinker on the Edge"
+  body: "ABOUT : 29, outgoing, loves spontaneous nights out; dislikes judgment and
+    \u201Clabels.\u201D\n\LGOALS : Keep nights fun without losing control or overspending;
+    quietly check risk.\n\LCHALLENGES : \u201CJust one more,\u201D FOMO, payday spirals;
+    avoids serious talks.\L\nTRIGGERS : Group chats, bar promos, sports/gambling
+    vibes, payday.\L\nSTRENGTHS : Loyal, competitive in a positive way, responds
+    to clear challenges."
+  startScene: MARKO_INTRO
