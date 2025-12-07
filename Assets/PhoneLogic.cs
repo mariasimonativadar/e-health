@@ -5,30 +5,30 @@ using System.Collections;
 public class PhoneLogic : MonoBehaviour
 {
     [Header("UI")]
-    public TMP_Text displayText;             
+    public TMP_Text displayText;
     private string currentInput = "";
 
     [Header("Dial Settings")]
-    public string supportiveNumber = "5551834";   
+    public string supportiveNumber = "5551834";   // main number for the story
     public int maxDigits = 7;
 
-    // Set true by PhoneDirectoryBook when directory is opened
+    // Set true by PhoneDirectoryBook when the directory is opened
     public static bool directoryUnlocked = false;
 
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip digitBeep;
     public AudioClip deleteBeep;
-    public AudioClip connectClip;            
+    public AudioClip connectClip;
     public AudioClip wrongNumberClip;
 
-    [Header("Mom Call Audio (dialogue sequence)")]
-    public AudioClip[] momCallLines;
+    [Header("Supportive Call Audio (dialogue sequence)")]
+    public AudioClip[] supportiveCallLines;
 
-    [Header("Subtitles for Mom Call")]
+    [Header("Subtitles for Supportive Call")]
     public GameObject subtitlesPanel;
     public TMP_Text subtitlesText;
-    public string[] momSubtitleLines;
+    public string[] supportiveSubtitleLines;
     public float subtitleLineDuration = 3f;
 
     private bool isCalling = false;
@@ -39,11 +39,11 @@ public class PhoneLogic : MonoBehaviour
         if (displayText != null) displayText.text = "";
         if (subtitlesPanel) subtitlesPanel.SetActive(false);
 
-        directoryUnlocked = false;   // reset every time scene loads
+        directoryUnlocked = false; // always reset on scene load
     }
 
     // ============================================================
-    //  ADD DIGIT
+    // ADD DIGIT
     // ============================================================
     public void AddDigit(string digit)
     {
@@ -57,6 +57,7 @@ public class PhoneLogic : MonoBehaviour
         if (currentInput.Length >= maxDigits) return;
 
         currentInput += digit;
+
         if (displayText != null)
             displayText.text = currentInput;
 
@@ -65,7 +66,7 @@ public class PhoneLogic : MonoBehaviour
     }
 
     // ============================================================
-    //  DELETE DIGIT
+    // DELETE DIGIT
     // ============================================================
     public void DeleteDigit()
     {
@@ -75,6 +76,7 @@ public class PhoneLogic : MonoBehaviour
         if (currentInput.Length > 0)
         {
             currentInput = currentInput.Substring(0, currentInput.Length - 1);
+
             if (displayText != null)
                 displayText.text = currentInput;
 
@@ -84,7 +86,7 @@ public class PhoneLogic : MonoBehaviour
     }
 
     // ============================================================
-    //  PRESS CALL
+    // CALL BUTTON
     // ============================================================
     public void CallButton()
     {
@@ -93,8 +95,8 @@ public class PhoneLogic : MonoBehaviour
 
         if (currentInput == supportiveNumber)
         {
-            Debug.Log("Calling MOM: " + currentInput);
-            StartCoroutine(StartMomCall());
+            Debug.Log("Calling Supportive Contact: " + currentInput);
+            StartCoroutine(StartSupportiveCall());
         }
         else
         {
@@ -104,7 +106,7 @@ public class PhoneLogic : MonoBehaviour
     }
 
     // ============================================================
-    //  WRONG NUMBER
+    // WRONG NUMBER FEEDBACK
     // ============================================================
     IEnumerator WrongNumber()
     {
@@ -115,16 +117,18 @@ public class PhoneLogic : MonoBehaviour
         {
             Vector3 originalPos = displayText.transform.localPosition;
 
+            // shake
             for (int i = 0; i < 10; i++)
             {
                 displayText.transform.localPosition =
                     originalPos + new Vector3(Random.Range(-5f, 5f), 0, 0);
+
                 yield return new WaitForSeconds(0.02f);
             }
 
             displayText.transform.localPosition = originalPos;
+            displayText.text = "Number is not reachable.";
 
-            displayText.text = "Number unreachable.";
             yield return new WaitForSeconds(1.2f);
 
             currentInput = "";
@@ -138,62 +142,75 @@ public class PhoneLogic : MonoBehaviour
     }
 
     // ============================================================
-    //  MOM CALL SEQUENCE
+    // SUPPORTIVE CALL SEQUENCE (universal for all personas)
     // ============================================================
-    IEnumerator StartMomCall()
+    IEnumerator StartSupportiveCall()
     {
         isCalling = true;
 
-        // 1) Ringing before mom picks up
+        // Ringing
         if (audioSource && connectClip)
         {
             audioSource.PlayOneShot(connectClip);
             yield return new WaitForSeconds(connectClip.length);
         }
 
-        // 2) Show subtitles panel
+        // Show subtitles
         if (subtitlesPanel) subtitlesPanel.SetActive(true);
 
-        // 3) Play mom + Mia dialogue sequence
-        for (int i = 0; i < momCallLines.Length; i++)
+        // Play dialogue sequence
+        for (int i = 0; i < supportiveCallLines.Length; i++)
         {
-            var clip = momCallLines[i];
+            var clip = supportiveCallLines[i];
             if (clip != null)
             {
                 audioSource.PlayOneShot(clip);
 
-                if (subtitlesText && momSubtitleLines.Length > i)
-                    subtitlesText.text = momSubtitleLines[i];
+                if (subtitlesText && supportiveSubtitleLines.Length > i)
+                    subtitlesText.text = supportiveSubtitleLines[i];
 
                 yield return new WaitForSeconds(clip.length + 0.25f);
             }
         }
 
-        // 4) Hide subtitles, clear display
+        // Hide subtitles
         if (subtitlesPanel) subtitlesPanel.SetActive(false);
         if (subtitlesText) subtitlesText.text = "";
 
+        // Clear number
         currentInput = "";
         if (displayText != null) displayText.text = "";
 
-        // 5) Close the phone UI so the cutscene can take over
-        PhoneInteraction phone = Object.FindFirstObjectByType<PhoneInteraction>();
+        // Close phone UI
+        PhoneInteraction phone = FindFirstObjectByType<PhoneInteraction>();
         if (phone != null)
-        {
             phone.ClosePhone();
-        }
 
-        // 6) TRIGGER ENDING SEQUENCE
-        GameEndingManager ending = Object.FindFirstObjectByType<GameEndingManager>();
+        // Trigger ending
+        GameEndingManager ending = FindFirstObjectByType<GameEndingManager>();
         if (ending != null)
-        {
             ending.StartEndingSequence();
-        }
         else
-        {
             Debug.LogWarning("GameEndingManager not found in scene.");
-        }
 
         isCalling = false;
+    }
+
+    // ============================================================
+    // RESET CALL STATE (used when ESC or reopen phone)
+    // ============================================================
+    public void ResetCallState()
+    {
+        isCalling = false;
+        currentInput = "";
+
+        if (displayText != null)
+            displayText.text = "";
+
+        if (subtitlesPanel != null)
+            subtitlesPanel.SetActive(false);
+
+        if (subtitlesText != null)
+            subtitlesText.text = "";
     }
 }

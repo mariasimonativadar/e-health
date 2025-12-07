@@ -8,7 +8,8 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        // Left mouse click like before
+        if (Input.GetMouseButtonDown(0))
         {
             TryInteract();
         }
@@ -18,32 +19,40 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (playerCamera == null)
         {
-            Debug.LogWarning("⚠️ Player camera not assigned!");
+            Debug.LogWarning("⚠ Player camera not assigned!");
             return;
         }
 
-        // Raycast only on objects in the "Door" layer
-        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, interactionRange, LayerMask.GetMask("Door")))
+        if (Physics.Raycast(ray, out hit, interactionRange))
         {
-            Debug.Log($"🔹 Raycast hit: {hit.collider.name}");
+            Debug.Log("🔹 Raycast hit: " + hit.collider.name);
 
+            // 1) LETTERS FIRST
+            LetterInteraction letter = hit.collider.GetComponentInParent<LetterInteraction>();
+            if (letter != null)
+            {
+                Debug.Log("📄 Letter found, opening UI");
+                letter.OpenLetter();
+                return;
+            }
+
+            // 2) DOOR SECOND
             DoorInteraction door = hit.collider.GetComponentInParent<DoorInteraction>();
             if (door != null)
             {
-                Debug.Log($"🚪 Found door: {door.name} | Calling ToggleDoor()");
+                Debug.Log("🚪 Door found, toggling");
                 door.ToggleDoor();
+                return;
             }
-            else
-            {
-                Debug.Log("❌ Object hit has no DoorInteraction script");
-            }
+
+            // (You can later add BottleInspect, PhoneInteraction, etc. here)
         }
         else
         {
-            Debug.Log("⚫ No door detected within range");
+            Debug.Log("⚫ Nothing hit by raycast");
         }
     }
 }

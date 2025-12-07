@@ -11,10 +11,10 @@ public class GameEndingManager : MonoBehaviour
     public string endMessage = "THE END";
 
     [Header("Door / Light")]
-    public EndingDoor endingDoor;      // <-- FINAL DOOR SCRIPT HERE
+    public EndingDoor endingDoor;      
     public Light brightLight;
     public float lightTargetIntensity = 10f;
-    public float lightLerpDuration = 3f;
+    public float lightLerpDuration = 2.5f;
 
     [Header("Player / Camera")]
     public Transform playerRoot;
@@ -27,8 +27,8 @@ public class GameEndingManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip doorbellClip;
-    public AudioClip miaPanicClip;   // 5 sec
-    public AudioClip momVoiceClip;   // 13 sec
+    public AudioClip miaPanicClip;
+    public AudioClip momVoiceClip;
     public AudioClip softEndMusic;
 
     [Header("Timing")]
@@ -36,7 +36,7 @@ public class GameEndingManager : MonoBehaviour
     public float messageDisplayTime = 2f;
     public float delayAfterMessage = 1f;
     public float delayAfterDoorbell = 1f;
-    public float delayBeforeEndText = 2f;
+    public float delayBeforeEndText = 1.5f;
 
     public void StartEndingSequence()
     {
@@ -45,58 +45,72 @@ public class GameEndingManager : MonoBehaviour
 
     IEnumerator Sequence()
     {
-        // Disable player movement scripts
+        // Disable player movement
         foreach (var c in playerControlScripts)
             if (c) c.enabled = false;
 
-        // -- Fade Message --
+        // FADE-IN INITIAL MESSAGE
         yield return new WaitForSeconds(delayBeforeMessage);
-
         messageText.text = initialMessage;
         fadeMessageCanvas.alpha = 1;
         yield return new WaitForSeconds(messageDisplayTime);
-        fadeMessageCanvas.alpha = 0;
 
+        // FADE OUT MESSAGE
+        fadeMessageCanvas.alpha = 0;
         yield return new WaitForSeconds(delayAfterMessage);
 
-        // -- Doorbell --
+        // DOORBELL
         audioSource.PlayOneShot(doorbellClip);
         yield return new WaitForSeconds(delayAfterDoorbell);
 
-        // -- Rotate Player --
+        // TURN PLAYER
         yield return StartCoroutine(RotatePlayerToDoor());
 
-        // -- Move Player --
+        // MOVE PLAYER TO DOOR
         yield return StartCoroutine(MovePlayerToDoor());
 
-        // -- Mia Dialogue --
+        // MIA LINE
         audioSource.PlayOneShot(miaPanicClip);
         yield return new WaitForSeconds(miaPanicClip.length + 0.3f);
 
-        // -- Mom Dialogue --
+        // MOM LINE
         audioSource.PlayOneShot(momVoiceClip);
         yield return new WaitForSeconds(momVoiceClip.length + 0.3f);
 
-        // -- Door Opens only AFTER Mom finishes --
+        // DOOR OPENS
         if (endingDoor != null)
             endingDoor.OpenDoor();
 
-        // -- Light Brightens --
+        // BRIGHT LIGHT FADES IN
         if (brightLight != null)
             yield return StartCoroutine(LerpLight());
 
-        // Wait then show END
+        // WAIT BEFORE THE END MESSAGE
         yield return new WaitForSeconds(delayBeforeEndText);
 
+        // SHOW THE END WITH NICE FADE
         messageText.text = endMessage;
-        fadeMessageCanvas.alpha = 1;
+        StartCoroutine(FadeInEndMessage());
 
-        // Ending music
         if (softEndMusic != null)
             audioSource.PlayOneShot(softEndMusic);
     }
 
-    // Smooth rotation toward door
+    // Fade-in for final END text
+    IEnumerator FadeInEndMessage()
+    {
+        fadeMessageCanvas.alpha = 0;
+        float t = 0f;
+
+        while (t < 1f)
+        {
+            t += Time.deltaTime;
+            fadeMessageCanvas.alpha = t;
+            yield return null;
+        }
+    }
+
+    // Rotate camera toward door
     IEnumerator RotatePlayerToDoor()
     {
         Quaternion startRot = playerRoot.rotation;
@@ -113,7 +127,7 @@ public class GameEndingManager : MonoBehaviour
         }
     }
 
-    // Move smoothly to standing point
+    // Move player to door
     IEnumerator MovePlayerToDoor()
     {
         Vector3 start = playerRoot.position;
@@ -128,7 +142,7 @@ public class GameEndingManager : MonoBehaviour
         }
     }
 
-    // Light fade-in
+    // Bright light fades in through door
     IEnumerator LerpLight()
     {
         float start = brightLight.intensity;

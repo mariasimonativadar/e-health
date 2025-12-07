@@ -17,7 +17,15 @@ public class PhoneInteraction : MonoBehaviour
             phoneCanvas.SetActive(false);    // hidden at start
     }
 
-    // This is called only from PlayerInteraction
+    // =====================================
+    //  CLICK ON PHONE → OPEN CANVAS
+    // =====================================
+    void OnMouseDown()
+    {
+        TogglePhoneCanvas();
+    }
+
+    // Called from PlayerInteraction AND from OnMouseDown
     public void TogglePhoneCanvas()
     {
         // Require directory to be read first
@@ -31,6 +39,7 @@ public class PhoneInteraction : MonoBehaviour
         if (player != null &&
             Vector3.Distance(player.position, transform.position) > interactDistance)
         {
+            Debug.Log("Too far from phone.");
             return;
         }
 
@@ -49,6 +58,19 @@ public class PhoneInteraction : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
+
+        Debug.Log("Phone toggled → " + (phoneOpen ? "OPEN" : "CLOSED"));
+    }
+
+    // =====================================
+    //  Allow ESC to close the phone
+    // =====================================
+    void Update()
+    {
+        if (phoneOpen && Input.GetKeyDown(KeyCode.Escape))
+        {
+            ClosePhone();
+        }
     }
 
     public void ClosePhone()
@@ -60,5 +82,10 @@ public class PhoneInteraction : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        // Reset phone logic so the player can dial again
+        PhoneLogic logic = FindFirstObjectByType<PhoneLogic>();
+        if (logic != null)
+            logic.ResetCallState();
     }
 }
