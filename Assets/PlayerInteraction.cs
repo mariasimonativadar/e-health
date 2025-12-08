@@ -48,7 +48,23 @@ public class PlayerInteraction : MonoBehaviour
                 return;
             }
 
-            // (You can later add BottleInspect, PhoneInteraction, etc. here)
+            // 3) BOTTLE THIRD
+            BottleInspect bottle = hit.collider.GetComponentInParent<BottleInspect>();
+            if (bottle != null)
+            {
+                Debug.Log("🍾 Bottle found, triggering inspect event");
+                bottle.TriggerBottleEvent();
+                return;
+            }
+
+            // 4) CLUE PANELS (work warning, etc.)
+            ClueInteraction clue = hit.collider.GetComponentInParent<ClueInteraction>();
+            if (clue != null)
+            {
+                Debug.Log("🧩 Clue found, showing clue panel");
+                clue.ShowClue();
+                return;
+            }
         }
         else
         {
