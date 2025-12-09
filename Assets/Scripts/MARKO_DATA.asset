@@ -19,4 +19,4 @@ MonoBehaviour:
     avoids serious talks.\L\nTRIGGERS : Group chats, bar promos, sports/gambling
     vibes, payday.\L\nSTRENGTHS : Loyal, competitive in a positive way, responds
     to clear challenges."
-  startScene: MARKO_INTRO
+  startScene: MarkoScene

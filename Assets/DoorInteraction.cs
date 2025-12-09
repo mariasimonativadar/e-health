@@ -1,12 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class DoorInteraction : MonoBehaviour
 {
     [Header("Door Settings")]
-    public Transform doorHinge;     // The part of the door that rotates
-    public float openAngle = 90f;   // Angle to open to
-    public float openSpeed = 2f;    // Speed of opening/closing
+    public Transform doorHinge;           // The part of the door that rotates
+    public float openAngle = 90f;         // Angle to open to
+    public float openSpeed = 2f;          // Speed of opening/closing
+
+    [Header("Scene Loading (optional)")]
+    public bool loadSceneOnOpen = false;  // Tick this ONLY on Room3 final door
+    public string sceneToLoad = "Room4";  // Name of the next scene
 
     private bool isOpen = false;
     private Quaternion closedRotation;
@@ -65,5 +70,12 @@ public class DoorInteraction : MonoBehaviour
         }
 
         Debug.Log($"🚪 Door finished moving: {name} | Open: {isOpen}");
+
+        // ⭐ If this is the Room3 end door, load the next scene after it opens
+        if (isOpen && loadSceneOnOpen && !string.IsNullOrEmpty(sceneToLoad))
+        {
+            Debug.Log($"➡️ Loading scene: {sceneToLoad}");
+            SceneManager.LoadScene(sceneToLoad);
+        }
     }
 }

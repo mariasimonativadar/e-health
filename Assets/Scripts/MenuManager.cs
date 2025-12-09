@@ -4,11 +4,9 @@ using System.Collections;
 
 public class MenuManager : MonoBehaviour
 {
-    [Header("Scene to open when Start is clicked")]
-    [SerializeField] string scenarioSelectScene = "Profile";  // exact scene name
+    [SerializeField] string scenarioSelectScene = "Profile";
 
-    [Header("Optional: click sound & tiny delay")]
-    public AudioSource uiAudio;    // 2D AudioSource
+    public AudioSource uiAudio;
     public AudioClip click;
     [Range(0f,1f)] public float volume = 0.7f;
     public float delay = 0.25f;

@@ -19,4 +19,4 @@ MonoBehaviour:
     long text bores him.\L\nTRIGGERS: FOMO in chats, late-night boredom, \u201Cjust
     one\u201D invites.\L\nSTRENGTHS : Tech-savvy, likes experiments, reacts to instant
     rewards/badges."
-  startScene: ALEX_INTRO
+  startScene: LukaScene

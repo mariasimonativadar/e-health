@@ -19,4 +19,4 @@ MonoBehaviour:
     momentum when overwhelmed, hides struggles from friends.\L\nTRIGGERS : Exam deadlines,
     money stress, late-night comparison, messy room.\L\nSTRENGTHS: Self-aware, caring,
     loves checklists and small wins."
-  startScene: MIA_INTRO
+  startScene: MiaScene

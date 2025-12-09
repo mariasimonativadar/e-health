@@ -7,15 +7,13 @@ public class RadioLogic : MonoBehaviour
     public AudioSource[] noiseSources;
 
     [Header("Settings")]
-    [Range(0f, 1f)] public float targetTuning = 0.8f;   // where the "right" voice is
-    [Range(0.01f, 0.5f)] public float tolerance = 0.08f; // width around target
+    [Range(0f, 1f)] public float targetTuning = 0.8f;
+    [Range(0.01f, 0.5f)] public float tolerance = 0.08f;
     public float fadeSpeed = 2f;
 
-    [Header("Door")]
-    public DoorInteractionRoom2 door;
-
     private float currentTuning = 0.5f;
-    private bool doorOpened = false;
+
+    public float CurrentTuning => currentTuning; // <-- added so controller can read tuning
 
     public void SetTuning(float value)
     {
@@ -29,7 +27,6 @@ public class RadioLogic : MonoBehaviour
 
         float dist = Mathf.Abs(currentTuning - targetTuning);
         float focus = Mathf.Clamp01(1f - dist / tolerance);
-        // focus = 0 → far from target, 1 → on target
 
         float targetSupportiveVol = Mathf.Lerp(0.05f, 1f, focus);
         float targetNoiseVol = Mathf.Lerp(1f, 0f, focus);
@@ -50,13 +47,6 @@ public class RadioLogic : MonoBehaviour
             );
         }
 
-        if (!doorOpened && focus > 0.95f)
-        {
-            doorOpened = true;
-            if (door != null)
-            {
-                door.OpenDoor();
-            }
-        }
+        // REMOVED: door opening logic
     }
 }

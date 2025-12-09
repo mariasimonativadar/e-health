@@ -19,4 +19,4 @@ MonoBehaviour:
     sounding judgmental; limited time.\L\nTRIGGERS : Emotional labor overload, crisis
     texts after hours, blurred boundaries.\L\nSTRENGTHS : Responsible, consistent,
     highly empathetic; follows through."
-  startScene: SARA_INTRO
+  startScene: SaraScene

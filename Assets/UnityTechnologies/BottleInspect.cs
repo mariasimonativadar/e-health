@@ -28,7 +28,6 @@ public class BottleInspect : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
-    // Exposed to other scripts
     public bool IsInspecting => isInspecting;
 
     void Start()
@@ -46,7 +45,6 @@ public class BottleInspect : MonoBehaviour
 
     public void TriggerBottleEvent()
     {
-        // Disable highlight when bottle is clicked
         BottleOutline outline = GetComponent<BottleOutline>();
         if (outline != null)
             outline.DisableOutline();
@@ -65,7 +63,6 @@ public class BottleInspect : MonoBehaviour
         originalPosition = transform.position;
         originalRotation = transform.rotation;
 
-        // Move to inspect position
         float t = 0f;
         while (t < 1f)
         {
@@ -74,7 +71,6 @@ public class BottleInspect : MonoBehaviour
             yield return null;
         }
 
-        // Rotate bottle upright for reveal
         Quaternion targetRot = Quaternion.Euler(-90f, 90f, 0f);
         float rotT = 0f;
         while (rotT < 1f)
@@ -84,7 +80,6 @@ public class BottleInspect : MonoBehaviour
             yield return null;
         }
 
-        // Fade in text
         if (hiddenText != null)
         {
             float fade = 0f;
@@ -98,10 +93,8 @@ public class BottleInspect : MonoBehaviour
             }
         }
 
-        // Shake bottle
         yield return StartCoroutine(ShakeBottle());
 
-        // Delay then fall
         yield return new WaitForSeconds(fallDelay);
         StartCoroutine(FallAndBreak());
     }
@@ -127,7 +120,6 @@ public class BottleInspect : MonoBehaviour
         rb.useGravity = true;
         canBreak = true;
 
-        // Push bottle down for falling animation
         rb.AddForce(Vector3.down * fallForce, ForceMode.Impulse);
 
         yield break;
@@ -139,14 +131,12 @@ public class BottleInspect : MonoBehaviour
 
         hasBroken = true;
 
-        // --- Spawn broken bottle lying flat ---
         if (brokenBottlePrefab)
         {
             Quaternion flatRotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
             Instantiate(brokenBottlePrefab, transform.position, flatRotation);
         }
 
-        // --- Play glass break sound fully ---
         if (glassBreakSound)
         {
             GameObject audioObj = new GameObject("GlassBreakSound");
@@ -155,6 +145,11 @@ public class BottleInspect : MonoBehaviour
             src.Play();
             Destroy(audioObj, glassBreakSound.length);
         }
+
+        // Register clue
+        var tracker = Object.FindFirstObjectByType<ClueTracker>();
+        if (tracker != null)
+            tracker.RegisterClue();
 
         Destroy(gameObject);
     }

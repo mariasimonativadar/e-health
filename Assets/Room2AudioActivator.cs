@@ -8,14 +8,13 @@ public class Room2AudioActivator : MonoBehaviour
     public AudioSource[] noiseSources;
 
     private bool activated = false;
+    private bool canActivate = false;
 
-    private void Start()
+    void Start()
     {
-        // Make sure this collider is a trigger
         Collider col = GetComponent<Collider>();
         col.isTrigger = true;
 
-        // Stop all audio at the beginning (while player is in Room 1)
         if (supportiveSource != null)
         {
             supportiveSource.Stop();
@@ -24,19 +23,30 @@ public class Room2AudioActivator : MonoBehaviour
 
         foreach (var src in noiseSources)
         {
-            if (src == null) continue;
-            src.Stop();
-            src.playOnAwake = false;
+            if (src != null)
+            {
+                src.Stop();
+                src.playOnAwake = false;
+            }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    // Called by Room1Door AFTER the door opens
+    public void AllowActivation()
+    {
+        canActivate = true;
+        Debug.Log("ROOM2 AUDIO ZONE: Ready to trigger.");
+    }
+
+    void OnTriggerEnter(Collider other)
     {
         if (activated) return;
+        if (!canActivate) return;
         if (!other.CompareTag("Player")) return;
 
         activated = true;
 
+        // Supportive voice
         if (supportiveSource != null)
         {
             supportiveSource.volume = 0f;
@@ -44,14 +54,43 @@ public class Room2AudioActivator : MonoBehaviour
             supportiveSource.Play();
         }
 
+        // Taunts / noises
         foreach (var src in noiseSources)
         {
-            if (src == null) continue;
-            src.volume = 1f;
-            src.loop = true;
-            src.Play();
+            if (src != null)
+            {
+                src.volume = 1f;
+                src.loop = true;
+                src.Play();
+            }
         }
 
-        Debug.Log("Room 2 audio activated (taunts + supportive).");
+        Debug.Log("ROOM2 AUDIO ZONE: Audio activated.");
+    }
+
+    // 🔻 NEW: stop audio when player leaves this room
+    void OnTriggerExit(Collider other)
+    {
+        if (!activated) return;
+        if (!other.CompareTag("Player")) return;
+
+        StopAudio();
+        Debug.Log("ROOM2 AUDIO ZONE: Audio stopped (player left Room 2).");
+    }
+
+    // 🔻 NEW: helper so you can also call this from other scripts if needed
+    public void StopAudio()
+    {
+        if (supportiveSource != null)
+            supportiveSource.Stop();
+
+        foreach (var src in noiseSources)
+        {
+            if (src != null)
+                src.Stop();
+        }
+
+        activated = false;
+        canActivate = false; // optional: prevent re-activating when coming back
     }
 }

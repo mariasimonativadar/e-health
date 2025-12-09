@@ -4,30 +4,39 @@ public class ClueInteraction : MonoBehaviour
 {
     public GameObject cluePanel;
     private bool isActive = false;
+    private bool hasBeenCounted = false;
 
     public void ShowClue()
     {
-        if (!isActive)
-        {
-            cluePanel.SetActive(true);
-            isActive = true;
+        cluePanel.SetActive(true);
+        isActive = true;
 
-            // Unlock cursor and show UI
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        if (!hasBeenCounted)
+        {
+            var tracker = FindObjectOfType<ClueTracker>();
+            if (tracker != null)
+                tracker.RegisterClue();
+
+            hasBeenCounted = true;
         }
+    }
+
+    // 🔥 BUTTON CALLS THIS
+    public void CloseCluePanel()
+    {
+        cluePanel.SetActive(false);
+        isActive = false;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
         if (isActive && Input.GetKeyDown(KeyCode.Escape))
-        {
-            cluePanel.SetActive(false);
-            isActive = false;
-
-            // Return to look mode
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+            CloseCluePanel();
     }
 }

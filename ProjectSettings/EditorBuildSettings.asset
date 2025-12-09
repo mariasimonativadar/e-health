@@ -5,8 +5,8 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+  - enabled: 1
+    path: Assets/Scenes/MarkoScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
@@ -17,6 +17,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/profile.unity
     guid: 00c86892bca68441f8ca1a6c9557fda1
+  - enabled: 0
+    path: Assets/Scenes/Room4.unity
+    guid: 39a3c80e8ae5945468014bb95e7beddb
+  - enabled: 1
+    path: Assets/Scenes/Room4_Marko.unity
+    guid: 98fcb36bd91bd1245b414b97f2a6196b
+  - enabled: 1
+    path: Assets/Scenes/MiaScene.unity
+    guid: dcdb5b0735627c14da2112bfa34073b1
+  - enabled: 1
+    path: Assets/Scenes/LukaScene.unity
+    guid: 9dd3eadadca7ec34da9fc6a5d3ccc1a5
+  - enabled: 1
+    path: Assets/Scenes/SaraScene.unity
+    guid: 5693341e293c56e40b69bc58f71e4fdc
+  - enabled: 1
+    path: Assets/Scenes/Room4_Luka.unity
+    guid: 1817227baff46074da3713feff7fea4b
+  - enabled: 1
+    path: Assets/Scenes/Room4_Mia.unity
+    guid: aee0d511dea61b149a9236c8b90c68b9
+  - enabled: 1
+    path: Assets/Scenes/Room4_Sara.unity
+    guid: c7c018be7c4bff84281c0f631fc62aa5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
