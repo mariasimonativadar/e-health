@@ -637,10 +637,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Controls:\n- W / A / S / D \u2192 Move\n- Mouse \u2192 Look\n- E \u2192
-    Interact with objects\n\nGoal:\n- Find clues that represent each stage of recovery.\n-
-    Solve the puzzles to progress through the rooms.\n\nTip:\n- Every object tells
-    a part of the story \u2014 explore carefully.\n"
+  m_text: "Controls:\n\n-W / A / S / D or Arrow Keys \u2192 Move\n-Mouse \u2192 Look
+    around\n-Left Mouse Click \u2192 Interact with objects\n-ESC \u2192 Close/Exit
+    certain interactions\n\nGoal:\n\n-Explore each room and interact with objects
+    to progress.\n-Some items are important to advance \u2014 others are just part
+    of the environment.\n-Pay attention to details, collect what matters, and make
+    the right choices to unlock the next area.\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23eb5705df914435bad5869dd3321370, type: 2}
   m_sharedMaterial: {fileID: -135787021128575495, guid: 23eb5705df914435bad5869dd3321370, type: 2}
@@ -667,8 +669,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

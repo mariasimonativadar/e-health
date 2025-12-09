@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 700}
+  m_SizeDelta: {x: 950, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483861
 MonoBehaviour:
@@ -894,7 +894,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Overwhelmed Student looking for support
+  m_text: 'Working adult facing alcohol & gambling stress
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1408,7 +1410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Curious \u2022 Playful \u2022 Easily distracted"
+  m_text: "Curious \u2022 Reflective \u2022 Social"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1417,8 +1419,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293650405
-  m_fontColor: {r: 0.8980392, g: 0.90588236, b: 0.92156863, a: 1}
+    rgba: 4287392345
+  m_fontColor: {r: 0.34901962, g: 0.41568628, b: 0.54901963, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1983,7 +1985,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Outgoing \u2022 Impulsive \u2022 Stubborn\n"
+  m_text: "Sensitive \u2022 Anxious \u2022 Self-critical"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1992,8 +1994,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293650405
-  m_fontColor: {r: 0.8980392, g: 0.90588236, b: 0.92156863, a: 1}
+    rgba: 4287392345
+  m_fontColor: {r: 0.3484336, g: 0.41467902, b: 0.5471698, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2558,7 +2560,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Sensitive \u2022 Anxious \u2022 Introverted"
+  m_text: "Responsible \u2022 Stressed \u2022 Avoidant"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2567,8 +2569,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293650405
-  m_fontColor: {r: 0.8980392, g: 0.90588236, b: 0.92156863, a: 1}
+    rgba: 4287392345
+  m_fontColor: {r: 0.34901962, g: 0.41568628, b: 0.54901963, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2830,7 +2832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Empathetic \u2022 Organized \u2022 Supportive"
+  m_text: "Friendly \u2022 Laid-back \u2022 Easily distracted"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2839,8 +2841,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293650405
-  m_fontColor: {r: 0.8980392, g: 0.90588236, b: 0.92156863, a: 1}
+    rgba: 4287392345
+  m_fontColor: {r: 0.34901962, g: 0.41568628, b: 0.54901963, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3111,7 +3113,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Caring professional with high well-being
+  m_text: 'Digitally engaged young adult escaping into online life
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3414,7 +3418,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Always-online friend curious about choices
+  m_text: 'High-functioning professional curious about risk
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3550,7 +3556,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: alex
+  m_text: 'luka
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23eb5705df914435bad5869dd3321370, type: 2}
   m_sharedMaterial: {fileID: -135787021128575495, guid: 23eb5705df914435bad5869dd3321370, type: 2}
@@ -3925,7 +3933,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 60, y: 250}
-  m_SizeDelta: {x: 910, y: 60}
+  m_SizeDelta: {x: 910, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842457293
 MonoBehaviour:
@@ -3947,7 +3955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: mia-Overwhelmed Student
+  m_text: "MIA \u2013 WORKING ADULT UNDER PRESSURE\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23eb5705df914435bad5869dd3321370, type: 2}
   m_sharedMaterial: {fileID: -135787021128575495, guid: 23eb5705df914435bad5869dd3321370, type: 2}
@@ -4295,12 +4303,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ABOUT : 28, master\u2019s student juggling part-time work. Anxious at
-    night; doom-scrolls, sleeps late.\n\LGOALS: Quick, realistic ways to calm down;
-    ask for help without feeling like a burden.\L\nCHALLENGES : Harsh self-talk,
-    loses momentum when overwhelmed, hides struggles from friends.\L\nTRIGGERS :
-    Exam deadlines, money stress, late-night comparison, messy room.\L\nSTRENGHTS:
-    Self-aware, caring, loves checklists and small wins."
+  m_text: "\nABOUT: 28, juggling work and family responsibilities.\n\nSTRUGGLES:
+    Uses alcohol/gambling to cope with exhaustion and money stress.\n\nDRIVES: Wants
+    stability, fewer conflicts, and clarity about her habits.\n\nTRAITS: Responsible
+    \u2022 Stressed \u2022 Avoidant"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4327,8 +4333,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4855,7 +4861,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Social drinker on the edge
+  m_text: 'Overwhelmed young adult coping with trauma & drugs
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

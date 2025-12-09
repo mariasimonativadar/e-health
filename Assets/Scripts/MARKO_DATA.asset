@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbe70e0cb15649819c2f5a56a67aa4f, type: 3}
   m_Name: MARKO_DATA
   m_EditorClassIdentifier: Assembly-CSharp::PersonaData
-  title: "MARKO \u2014 Social Drinker on the Edge"
-  body: "ABOUT : 29, outgoing, loves spontaneous nights out; dislikes judgment and
-    \u201Clabels.\u201D\n\LGOALS : Keep nights fun without losing control or overspending;
-    quietly check risk.\n\LCHALLENGES : \u201CJust one more,\u201D FOMO, payday spirals;
-    avoids serious talks.\L\nTRIGGERS : Group chats, bar promos, sports/gambling
-    vibes, payday.\L\nSTRENGTHS : Loyal, competitive in a positive way, responds
-    to clear challenges."
+  title: "MARKO \u2013 EMOTIONALLY OVERWHELMED "
+  body: "ABOUT: 29, dealing with past trauma and unstable routines, often feeling
+    on edge.\n\nSTRUGGLES: Uses substances to calm intrusive thoughts, then feels
+    ashamed and misunderstood.\n\nDRIVES: Wants emotional safety, relief from constant
+    tension, and support without judgment.\n\n\nTRAITS: Sensitive \u2022 Anxious
+    \u2022 Self-critical"
   startScene: MarkoScene

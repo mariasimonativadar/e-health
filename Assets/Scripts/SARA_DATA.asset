@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbe70e0cb15649819c2f5a56a67aa4f, type: 3}
   m_Name: SARA_DATA
   m_EditorClassIdentifier: Assembly-CSharp::PersonaData
-  title: "SARA \u2014 Caring Professional with High Well-Being"
-  body: "ABOUT : 30, empathetic and organized; wants to support others without burning
-    out.\L\nGOALS : Practical, accurate info; ready-to-use scripts; protect her own
-    boundaries.\n\LCHALLENGES : Feels helpless with others\u2019 struggles; fears
-    sounding judgmental; limited time.\L\nTRIGGERS : Emotional labor overload, crisis
-    texts after hours, blurred boundaries.\L\nSTRENGTHS : Responsible, consistent,
-    highly empathetic; follows through."
+  title: "SARA \u2013 DIGITAL ESCAPER "
+  body: "ABOUT: Mid\u2013late 20s, low-paid or unstable jobs, spends long hours online
+    to cope with boredom.\n\nSTRUGGLES: Feels stuck, unmotivated, and overwhelmed
+    by late-night screen habits and drifting routines.\n\nDRIVES: Wants healthier
+    daily habits, more structure, and a sense of direction\n\nTRAITS: Friendly \u2022
+    Laid-back \u2022 Easily distracted"
   startScene: SaraScene

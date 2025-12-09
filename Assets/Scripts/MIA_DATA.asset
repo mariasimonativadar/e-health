@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbe70e0cb15649819c2f5a56a67aa4f, type: 3}
   m_Name: MIA_DATA
   m_EditorClassIdentifier: Assembly-CSharp::PersonaData
-  title: MIA-OVERWHELMED STUDENT
-  body: "ABOUT : 28, master\u2019s student juggling part-time work. Anxious at night;
-    doom-scrolls, sleeps late.\n\LGOALS: Quick, realistic ways to calm down; ask
-    for help without feeling like a burden.\L\nCHALLENGES : Harsh self-talk, loses
-    momentum when overwhelmed, hides struggles from friends.\L\nTRIGGERS : Exam deadlines,
-    money stress, late-night comparison, messy room.\L\nSTRENGTHS: Self-aware, caring,
-    loves checklists and small wins."
+  title: "MIA \u2013 WORKING ADULT UNDER PRESSURE "
+  body: "ABOUT: 28, balancing long shifts and family responsibilities, often exhausted.\n\nSTRUGGLES:
+    Drinks or gambles to unwind after stressful days, then feels guilty about money
+    and arguments at home.\n\nDRIVES: Wants peace, stability, and to feel more in
+    control of her life again.\n\nTRAITS: Responsible \u2022 Stressed \u2022 Avoidant"
   startScene: MiaScene

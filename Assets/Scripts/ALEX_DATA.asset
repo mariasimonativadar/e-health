@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbe70e0cb15649819c2f5a56a67aa4f, type: 3}
   m_Name: ALEX_DATA
   m_EditorClassIdentifier: Assembly-CSharp::PersonaData
-  title: ALEX- Always-Online, Curious About Choices
-  body: "ABOUT : 26, IT support; playful, spends lots of time online; wants quick
-    feedback.\n\LGOALS : Understand peer influence; keep life \u201Cunder control\u201D
-    without big changes.\L\nCHALLENGES : Says yes to keep the vibe; procrastinates;
-    long text bores him.\L\nTRIGGERS: FOMO in chats, late-night boredom, \u201Cjust
-    one\u201D invites.\L\nSTRENGTHS : Tech-savvy, likes experiments, reacts to instant
-    rewards/badges."
+  title: "LUKA \u2013 CURIOUS PROFESSIONAL "
+  body: "ABOUT: Early 30s, successful career, stable life, generally well-balanced.\n\nSTRUGGLES:
+    Unsure when social drinking and experimentation quietly become risky habits.\n\nDRIVES:
+    Wants clarity, self-awareness, and ways to support friends who may be struggling.\n\nTRAITS:
+    Curious \u2022 Reflective \u2022 Social"
   startScene: LukaScene
