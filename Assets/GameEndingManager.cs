@@ -40,6 +40,10 @@ public class GameEndingManager : MonoBehaviour
 
     public void StartEndingSequence()
     {
+        // 🔥 FIX ADDED: ensure light is dark at start
+        if (brightLight != null)
+            brightLight.intensity = 0f;
+
         StartCoroutine(Sequence());
     }
 
@@ -81,7 +85,7 @@ public class GameEndingManager : MonoBehaviour
         if (endingDoor != null)
             endingDoor.OpenDoor();
 
-        // BRIGHT LIGHT FADES IN
+        // BRIGHT LIGHT FADES IN (now correctly)
         if (brightLight != null)
             yield return StartCoroutine(LerpLight());
 
@@ -96,7 +100,6 @@ public class GameEndingManager : MonoBehaviour
             audioSource.PlayOneShot(softEndMusic);
     }
 
-    // Fade-in for final END text
     IEnumerator FadeInEndMessage()
     {
         fadeMessageCanvas.alpha = 0;
@@ -110,7 +113,6 @@ public class GameEndingManager : MonoBehaviour
         }
     }
 
-    // Rotate camera toward door
     IEnumerator RotatePlayerToDoor()
     {
         Quaternion startRot = playerRoot.rotation;
@@ -127,7 +129,6 @@ public class GameEndingManager : MonoBehaviour
         }
     }
 
-    // Move player to door
     IEnumerator MovePlayerToDoor()
     {
         Vector3 start = playerRoot.position;
@@ -142,10 +143,9 @@ public class GameEndingManager : MonoBehaviour
         }
     }
 
-    // Bright light fades in through door
     IEnumerator LerpLight()
     {
-        float start = brightLight.intensity;
+        float start = brightLight.intensity; // starts from 0 now
         float t = 0;
 
         while (t < lightLerpDuration)

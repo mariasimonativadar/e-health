@@ -7,6 +7,10 @@ public class PhoneDirectoryBook : MonoBehaviour
     public PhoneDirectoryPanel directoryPanel;   // beige phone directory panel controller
     public TMP_Text directoryText;              // Text inside the panel listing numbers
 
+    [Header("Directory Content")]
+    [TextArea(3, 10)]
+    public string directoryContent;             // <-- you type the text here in Inspector
+
     [Header("Player Distance Check")]
     public Transform player;
     public float interactDistance = 2f;
@@ -32,17 +36,11 @@ public class PhoneDirectoryBook : MonoBehaviour
             hasOriginalEmission = true;
         }
 
-        // Auto-fill the phone directory text
-        if (directoryText != null)
+        // 🔹 Auto-fill from Inspector string instead of hard-coded text
+        if (directoryText != null && !string.IsNullOrEmpty(directoryContent))
         {
-            directoryText.richText = true;  // make sure TMP uses rich text
-            directoryText.text =
-                "<b>Neighbor:</b> 645-298\n" +
-                "<b>Luca :</b> 772-940\n" +
-                "<b>Taxi Service:</b> 540-882\n" +
-                "<b>Fire & Rescue:</b> 330-114\n" +
-                "<b>Landlord:</b> 902-744\n" +
-                "<b>Hospital Helpline:</b> 664-503";
+            directoryText.richText = true;  
+            directoryText.text = directoryContent;
         }
     }
 

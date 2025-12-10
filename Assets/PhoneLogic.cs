@@ -26,8 +26,7 @@ public class PhoneLogic : MonoBehaviour
     public AudioClip[] supportiveCallLines;
 
     [Header("Subtitles for Supportive Call")]
-    public GameObject subtitlesPanel;
-    public TMP_Text subtitlesText;
+    public TMP_Text subtitlesText;                      // ONLY TEXT (no panel)
     public string[] supportiveSubtitleLines;
     public float subtitleLineDuration = 3f;
 
@@ -37,7 +36,10 @@ public class PhoneLogic : MonoBehaviour
     {
         currentInput = "";
         if (displayText != null) displayText.text = "";
-        if (subtitlesPanel) subtitlesPanel.SetActive(false);
+
+        // hide subtitles at start
+        if (subtitlesText != null)
+            subtitlesText.gameObject.SetActive(false);
 
         directoryUnlocked = false; // always reset on scene load
     }
@@ -142,26 +144,28 @@ public class PhoneLogic : MonoBehaviour
     }
 
     // ============================================================
-    // SUPPORTIVE CALL SEQUENCE (universal for all personas)
+    // SUPPORTIVE CALL SEQUENCE
     // ============================================================
     IEnumerator StartSupportiveCall()
     {
         isCalling = true;
 
-        // Ringing
+        // Ringing sound
         if (audioSource && connectClip)
         {
             audioSource.PlayOneShot(connectClip);
             yield return new WaitForSeconds(connectClip.length);
         }
 
-        // Show subtitles
-        if (subtitlesPanel) subtitlesPanel.SetActive(true);
+        // Show subtitle text only
+        if (subtitlesText != null)
+            subtitlesText.gameObject.SetActive(true);
 
         // Play dialogue sequence
         for (int i = 0; i < supportiveCallLines.Length; i++)
         {
             var clip = supportiveCallLines[i];
+
             if (clip != null)
             {
                 audioSource.PlayOneShot(clip);
@@ -174,10 +178,13 @@ public class PhoneLogic : MonoBehaviour
         }
 
         // Hide subtitles
-        if (subtitlesPanel) subtitlesPanel.SetActive(false);
-        if (subtitlesText) subtitlesText.text = "";
+        if (subtitlesText)
+        {
+            subtitlesText.text = "";
+            subtitlesText.gameObject.SetActive(false);
+        }
 
-        // Clear number
+        // Reset number
         currentInput = "";
         if (displayText != null) displayText.text = "";
 
@@ -197,7 +204,7 @@ public class PhoneLogic : MonoBehaviour
     }
 
     // ============================================================
-    // RESET CALL STATE (used when ESC or reopen phone)
+    // RESET CALL STATE
     // ============================================================
     public void ResetCallState()
     {
@@ -207,10 +214,10 @@ public class PhoneLogic : MonoBehaviour
         if (displayText != null)
             displayText.text = "";
 
-        if (subtitlesPanel != null)
-            subtitlesPanel.SetActive(false);
-
         if (subtitlesText != null)
+        {
             subtitlesText.text = "";
+            subtitlesText.gameObject.SetActive(false);
+        }
     }
 }

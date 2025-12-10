@@ -5,18 +5,39 @@ public class Clue : MonoBehaviour
     [Header("Tracking")]
     public ClueTracker tracker;
 
+    private bool alreadyRegistered = false;
+
+    // ----------------------------------------
+    // NORMAL COLLECTION (for clues you pick up)
+    // ----------------------------------------
     public void Collect()
     {
+        if (!alreadyRegistered)
+        {
+            RegisterClueOnly();
+        }
+
+        // Remove from scene
+        Destroy(gameObject);
+    }
+
+    // ---------------------------------------------------------
+    // REGISTER WITHOUT DESTROYING (for monitor, calendar, etc.)
+    // ---------------------------------------------------------
+    public void RegisterClueOnly()
+    {
+        if (alreadyRegistered)
+            return;
+
+        alreadyRegistered = true;
+
         if (tracker != null)
         {
             tracker.RegisterClue();
         }
         else
         {
-            Debug.LogWarning("Clue: no ClueTracker assigned on " + name);
+            Debug.LogWarning("Clue: No ClueTracker assigned on " + name);
         }
-
-        // Remove clue from the scene (or disable instead if you prefer)
-        Destroy(gameObject);
     }
 }
