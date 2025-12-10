@@ -3858,17 +3858,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568044244}
-  m_LocalRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0785}
+  m_LocalRotation: {x: 0.22497138, y: -0.67185426, z: -0.6696558, w: 0.22262314}
+  m_LocalPosition: {x: 0, y: 0, z: 0.433}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2144034223}
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: 306.903, y: 269.61798, z: -89.819}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0425, y: 0.0958}
-  m_SizeDelta: {x: 3, y: 0.4}
+  m_AnchoredPosition: {x: 0.033, y: -0.051}
+  m_SizeDelta: {x: 10, y: 0.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &568044246
 MonoBehaviour:
@@ -3890,8 +3890,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: niagA???
-  m_isRightToLeft: 1
+  m_text: Again???
+  m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: bf8d5cc155bd22d488e03ed04e8bb964, type: 2}
   m_fontSharedMaterials: []
@@ -10852,7 +10852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1563125681
 MonoBehaviour:
   m_ObjectHideFlags: 0
