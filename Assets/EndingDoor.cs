@@ -1,11 +1,14 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class EndingDoor : MonoBehaviour
 {
     public Transform doorHinge;
     public float openAngle = 90f;
     public float openSpeed = 2f;
+
+    public event Action OnDoorOpened;   // 🔹 ADD THIS
 
     private bool isOpen = false;
     private Quaternion closedRotation;
@@ -41,5 +44,7 @@ public class EndingDoor : MonoBehaviour
                 Quaternion.Slerp(closedRotation, openRotation, t);
             yield return null;
         }
+
+        OnDoorOpened?.Invoke(); // 🔹 FIRE EVENT
     }
 }

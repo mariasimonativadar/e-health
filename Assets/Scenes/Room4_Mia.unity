@@ -19165,8 +19165,7 @@ MonoBehaviour:
     how much \r\nyou\u2019re trying to hold everything together \u2014 the house,
     work, Lena\u2026 us.\r\n\r\nYou don\u2019t have to face all of this alone. I\u2019m
     not angry. I just want \r\nyou safe, and I want us back on the same side again.\r\n\r\nPlease
-    talk to me when you\u2019re ready. No judgement. Just us.\r\n\r\n\u2014 Marko
-    :-2487\r\n"
+    talk to me when you\u2019re ready. No judgement. Just us.\r\n\r\n\u2014 Daniel:-2487\r\n"
   letterCode: 2487
   isSupportive: 1
   letterUIPanel: {fileID: 1392450960}
@@ -20618,6 +20617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109309564}
   - component: {fileID: 2109309565}
+  - component: {fileID: 2109309566}
   m_Layer: 6
   m_Name: Door Pivot (1)
   m_TagString: Untagged
@@ -20656,6 +20656,21 @@ MonoBehaviour:
   doorHinge: {fileID: 1339745252}
   openAngle: 90
   openSpeed: 2
+--- !u!114 &2109309566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109309563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82611b1a4e89b0c408a5b1d80f83ff42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSequenceLoader
+  endingDoor: {fileID: 2109309565}
+  endCreditsSceneName: Ending Credit Scene
+  delayBeforeCredits: 8
 --- !u!1 &2110337997
 GameObject:
   m_ObjectHideFlags: 0

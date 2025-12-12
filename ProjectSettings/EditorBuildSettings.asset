@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room4_Sara.unity
     guid: c7c018be7c4bff84281c0f631fc62aa5
+  - enabled: 1
+    path: Assets/Ending Scene/Ending Credit Scene.unity
+    guid: 14ca1be2c90c2eb478c335ff98bc761a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

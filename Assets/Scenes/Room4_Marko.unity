@@ -1675,7 +1675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Close
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10253,12 +10253,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 32885108f8bd2ea4eba0eb2ae93a0d98, type: 3}
   subtitlesText: {fileID: 328598942}
   supportiveSubtitleLines:
-  - "\"Hey\u2026 Luca\u2026 I don\u2019t feel right. Something\u2019s off\u2026 I
-    just needed to call you.\""
+  - "\"Luca\u2026Hey... I don\u2019t feel right. Something\u2019s off\u2026 I just
+    needed to call you.\""
   - "\"Marko, slow down. You sound really rough\u2026 what\u2019s happening over
     there?\""
-  - "\"I don\u2019t know\u2026 something\u2019s not right. I can\u2019t think straight\u2026
-    and I don\u2019t wanna be alone right now.\""
+  - "\"Something\u2019s not right. I can\u2019t think straight\u2026 and I don\u2019t
+    wanna be alone right now.\""
   - "\"Alright, I\u2019m coming over, man. Stay where you are \u2014 I\u2019ll be
     there in a few minutes.\""
   subtitleLineDuration: 3
@@ -16167,6 +16167,14 @@ PrefabInstance:
       propertyPath: m_EditorClassIdentifier
       value: Assembly-CSharp::SojaExiles.Drawer_Pull_X
       objectReference: {fileID: 0}
+    - target: {fileID: 5018950055006186480, guid: c15f037642a1e1b439d19869e86e1ddf, type: 3}
+      propertyPath: m_Size.x
+      value: 0.12881184
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018950055006186480, guid: c15f037642a1e1b439d19869e86e1ddf, type: 3}
+      propertyPath: m_Center.x
+      value: 0.45172262
+      objectReference: {fileID: 0}
     - target: {fileID: 5018950055216721060, guid: c15f037642a1e1b439d19869e86e1ddf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18672,7 +18680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d133ef43429ce64391a7dcc8ca99bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LetterInteraction
-  letterText: "\u201CFrom Luka\u201D\nYou are drinking way too much, and it\u2019s
+  letterText: "\u201CFrom Luca\u201D\nYou are drinking way too much, and it\u2019s
     starting to show. You keep saying you\u2019re fine, but you\u2019re not. You
     look tired, stressed, and stuck in the same loop every week.\n\nI\u2019m not
     trying to attack you. I just care about you, and I know you can do better than
@@ -19841,7 +19849,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20180,6 +20188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109309564}
   - component: {fileID: 2109309565}
+  - component: {fileID: 2109309566}
   m_Layer: 6
   m_Name: Door Pivot (1)
   m_TagString: Untagged
@@ -20218,6 +20227,21 @@ MonoBehaviour:
   doorHinge: {fileID: 1339745252}
   openAngle: 90
   openSpeed: 2
+--- !u!114 &2109309566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109309563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82611b1a4e89b0c408a5b1d80f83ff42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSequenceLoader
+  endingDoor: {fileID: 2109309565}
+  endCreditsSceneName: Ending Credit Scene
+  delayBeforeCredits: 8
 --- !u!1 &2110337997
 GameObject:
   m_ObjectHideFlags: 0
@@ -21709,6 +21733,30 @@ PrefabInstance:
     - target: {fileID: 2448687524753308532, guid: 6b8d2f47d18470b41ab6edd3dab2cc31, type: 3}
       propertyPath: m_Center.z
       value: 0.3948593
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907102912215757366, guid: 6b8d2f47d18470b41ab6edd3dab2cc31, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5508537
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907102912215757366, guid: 6b8d2f47d18470b41ab6edd3dab2cc31, type: 3}
+      propertyPath: m_Size.y
+      value: 0.4895897
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907102912215757366, guid: 6b8d2f47d18470b41ab6edd3dab2cc31, type: 3}
+      propertyPath: m_Size.z
+      value: 0.30781746
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907102912215757366, guid: 6b8d2f47d18470b41ab6edd3dab2cc31, type: 3}
+      propertyPath: m_Center.x
+      value: 0.27542686
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907102912215757366, guid: 6b8d2f47d18470b41ab6edd3dab2cc31, type: 3}
+      propertyPath: m_Center.y
+      value: -0.25520515
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907102912215757366, guid: 6b8d2f47d18470b41ab6edd3dab2cc31, type: 3}
+      propertyPath: m_Center.z
+      value: 0.34609127
       objectReference: {fileID: 0}
     - target: {fileID: 6116757578252553055, guid: 6b8d2f47d18470b41ab6edd3dab2cc31, type: 3}
       propertyPath: m_LocalPosition.x
