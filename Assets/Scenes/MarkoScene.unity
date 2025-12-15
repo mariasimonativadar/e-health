@@ -9939,6 +9939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8945023570613626161, guid: adffeaf7a5f1f6a49b3d7d275ca84f2e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: bf3422f02503ea7418cc91192466f2ae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17907,6 +17911,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8945023570613626161, guid: adffeaf7a5f1f6a49b3d7d275ca84f2e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: bf3422f02503ea7418cc91192466f2ae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18918,6 +18926,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5999326650542111934, guid: 00ebca87e53d6fe4293c88f252496dec, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 49b8ed17966c1ce4eabce07c2e9f51de, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19741,6 +19753,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8945023570613626161, guid: adffeaf7a5f1f6a49b3d7d275ca84f2e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: bf3422f02503ea7418cc91192466f2ae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21508,6 +21524,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6069496374088722215, guid: a4bc6c888d501594b815ad51f8e7f7a2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: bf3422f02503ea7418cc91192466f2ae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24223,6 +24243,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5999326650542111934, guid: 00ebca87e53d6fe4293c88f252496dec, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 49b8ed17966c1ce4eabce07c2e9f51de, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25578,6 +25602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beer Bottle Red with Label
       objectReference: {fileID: 0}
+    - target: {fileID: 7594262650728078188, guid: 0978379453ae6ac4ea619bc92a25e42d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: bf3422f02503ea7418cc91192466f2ae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26742,6 +26770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beer Bottle Red (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5269283358172384337, guid: 094b5e0777b67a64f88ce0eb50166234, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: bf3422f02503ea7418cc91192466f2ae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31916,6 +31948,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5999326650542111934, guid: 00ebca87e53d6fe4293c88f252496dec, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 49b8ed17966c1ce4eabce07c2e9f51de, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34097,6 +34133,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8945023570613626161, guid: adffeaf7a5f1f6a49b3d7d275ca84f2e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: bf3422f02503ea7418cc91192466f2ae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35803,6 +35843,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beer Bottle Red
       objectReference: {fileID: 0}
+    - target: {fileID: 5269283358172384337, guid: 094b5e0777b67a64f88ce0eb50166234, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: bf3422f02503ea7418cc91192466f2ae, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -44574,6 +44618,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 846528946}
     m_Modifications:
+    - target: {fileID: 299089980372011870, guid: 189db782fd29ba749a4618c937fc6614, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 49b8ed17966c1ce4eabce07c2e9f51de, type: 2}
     - target: {fileID: 2677333919161239958, guid: 189db782fd29ba749a4618c937fc6614, type: 3}
       propertyPath: m_Layer
       value: 9
