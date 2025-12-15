@@ -9,9 +9,12 @@ public class DoorInteraction : MonoBehaviour
     public float openAngle = 90f;         // Angle to open to
     public float openSpeed = 2f;          // Speed of opening/closing
 
+    [Header("Lock Settings")]
+    public bool isLocked = true;          // Start locked for Room3 final door
+
     [Header("Scene Loading (optional)")]
-    public bool loadSceneOnOpen = false;  // Tick this ONLY on Room3 final door
-    public string sceneToLoad = "Room4";  // Name of the next scene
+    public bool loadSceneOnOpen = false;  // Tick ONLY on Room3 final door
+    public string sceneToLoad = "Room4";  // Next scene name
 
     private bool isOpen = false;
     private Quaternion closedRotation;
@@ -20,7 +23,6 @@ public class DoorInteraction : MonoBehaviour
 
     void Start()
     {
-        // Store the starting rotation of the door
         if (doorHinge == null)
         {
             Debug.LogWarning($"⚠️ Door hinge not assigned on {name}!");
@@ -30,7 +32,6 @@ public class DoorInteraction : MonoBehaviour
         closedRotation = doorHinge.localRotation;
         openRotation = Quaternion.Euler(0f, openAngle, 0f) * closedRotation;
 
-        // Cache the collider (on the door hinge or the door mesh)
         doorCollider = doorHinge.GetComponent<Collider>();
         if (doorCollider == null)
         {
@@ -38,8 +39,20 @@ public class DoorInteraction : MonoBehaviour
         }
     }
 
+    // ✅ Makes door clickable even without a separate interaction manager
+    void OnMouseDown()
+    {
+        ToggleDoor();
+    }
+
     public void ToggleDoor()
     {
+        if (isLocked)
+        {
+            Debug.Log("🚫 Door is locked: " + name);
+            return;
+        }
+
         if (doorHinge == null)
         {
             Debug.LogError($"❌ Door hinge not set for {name}!");
@@ -50,12 +63,17 @@ public class DoorInteraction : MonoBehaviour
         StartCoroutine(RotateDoor());
     }
 
+    public void UnlockDoor()
+    {
+        isLocked = false;
+        Debug.Log("🔓 Door unlocked (player must still click to open): " + name);
+    }
+
     private IEnumerator RotateDoor()
     {
         isOpen = !isOpen;
         Quaternion targetRotation = isOpen ? openRotation : closedRotation;
 
-        // Disable collider when open so player can walk through
         if (doorCollider != null)
             doorCollider.isTrigger = isOpen;
 
@@ -71,7 +89,6 @@ public class DoorInteraction : MonoBehaviour
 
         Debug.Log($"🚪 Door finished moving: {name} | Open: {isOpen}");
 
-        // ⭐ If this is the Room3 end door, load the next scene after it opens
         if (isOpen && loadSceneOnOpen && !string.IsNullOrEmpty(sceneToLoad))
         {
             Debug.Log($"➡️ Loading scene: {sceneToLoad}");
