@@ -22,6 +22,12 @@ Target Platform:
 - Windows
 - macOS
 
+How to Run the Game:
+
+Open the Unity project and load the MainMenu scene.
+The game should be started from the MainMenu scene using the Play button.
+All other scenes (persona rooms and endings) are loaded automatically through gameplay.
+
 Notes:
 This project was developed using Unity with reusable interaction systems shared across multiple personas. 
 Persona-specific content (text, audio, and narrative elements) is swapped while keeping core mechanics consistent.
