@@ -2388,9 +2388,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1069606992}
+      - m_Target: {fileID: 1069606998}
         m_TargetAssemblyTypeName: PhoneLogic, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: AddDigit
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
